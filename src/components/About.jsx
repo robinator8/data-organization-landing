@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import dimensions from "styles/dimensions";
 import { RichText } from "prismic-reactjs";
 import PropTypes from "prop-types";
+import * as constants from "utils/constants";
 
 const AboutContainer = styled("div")`
     padding-top: 1em;
@@ -97,9 +98,9 @@ const About = ({ bio, socialLinks }) => (
             {RichText.render(bio)}
         </AboutBio>
         <AboutActions>
-            <a href="mailto:marguerite.roth@gmail.com" target="_blank" rel="noopener noreferrer">
+            <a href={"mailto:" + constants.organizationEmail} target="_blank" rel="noopener noreferrer">
                 <Button className="Button--secondary">
-                    Email me
+                    Email us
                 </Button>
             </a>
         </AboutActions>
