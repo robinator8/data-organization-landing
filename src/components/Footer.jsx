@@ -53,9 +53,11 @@ const Footer = () => (
         <Link to="/">
             <Logo />
         </Link>
+        <FooterAuthor href="/">
+            © 2020 — Phoenix Data Consulting Group 
+        </FooterAuthor>
         <FooterAuthor href="https://marguerite.io">
-            © 2019 — Designed & developed by Marguerite Roth
-            <FooterSpooch className="FooterSpooch" src={spooch} />
+            © 2019 — Template Designed & developed by Marguerite Roth
         </FooterAuthor>
     </FooterContainer>
 )
