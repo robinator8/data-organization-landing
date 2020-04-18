@@ -27,13 +27,13 @@ const Hero = styled("div")`
         a {
             text-decoration: none;
             transition: all 100ms ease-in-out;
-            color: ${colors.orange500}; }
+            color: ${colors.orange500};
 
             &:hover {
                 cursor: pointer;
                 transition: all 100ms ease-in-out;
                 color: ${colors.orange600};  
-                background-color: ${colors.orange200};}
+                background-color: ${colors.orange200};
             }
         }
     }
