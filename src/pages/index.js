@@ -72,7 +72,7 @@ const WorkAction = styled(Link)`
     }
 
     &:hover {
-        color: ${colors.blue500};
+        color: ${colors.orange500};
         transition: all 150ms ease-in-out;
 
         span {
