@@ -17,18 +17,18 @@ const HeaderContent = styled("div")`
 
 const HeaderLinks = styled("div")`
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-gap: 7em;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 5em;
     justify-content: flex-end;
     width: 100%;
     max-width: 200px;
 
     @media(max-width: ${dimensions.maxwidthTablet}px) {
-        grid-gap: 5.5em;
+        grid-gap: 4em;
     }
 
     @media(max-width: ${dimensions.maxwidthMobile}px) {
-        grid-gap: 2.5em;
+        grid-gap: 2em;
     }
 
     a {
@@ -88,6 +88,11 @@ const Header = () => (
                     activeClassName="Link--is-active"
                     to="/work">
                     Work
+                </Link>
+                <Link
+                    activeClassName="Link--is-active"
+                    to="/team">
+                    Team
                 </Link>
                 <Link
                     activeClassName="Link--is-active"

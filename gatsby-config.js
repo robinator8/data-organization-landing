@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Prist | Gatsby & Prismic Starter`,
-        description: `A starter powered by Gatsby and Prismic to showcase portfolios and blogs.`,
-    author: `Marguerite Roth | marguerite.io`,
+    title: `Phoenix Data Consulting | Empowering startups with data science`,
+        description: `A team of data scientists who utilize data science and build machine learning products to empower startups and non-profits across Canada.`,
+    author: `Phoenix Data Consulting Group | phoenixdataconsulting.ca`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -33,13 +33,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-prismic-starter-prist`,
+        name: `phoenix-data-consulting`,
         short_name: `prist`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#F46B3F`,
+        theme_color: `#F46B3F`,
         display: `minimal-ui`,
-        icon: `src/images/oscar-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo-1-small.png`, // This path is relative to the root of the site.
       },
     },
     // https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/

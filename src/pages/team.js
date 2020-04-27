@@ -6,14 +6,14 @@ import styled from "@emotion/styled";
 import Layout from "components/Layout";
 import ProjectCard from "components/ProjectCard";
 
-const WorkTitle = styled("h1")`
+const TeamTitle = styled("h1")`
     margin-bottom: 1em;
 `
 
 const Work = ({ projects, meta }) => (
     <>
         <Helmet
-            title={"Work"}
+            title={"Team"}
             titleTemplate={`%s | ${meta.title}`}
             meta={[
                 {
@@ -51,9 +51,9 @@ const Work = ({ projects, meta }) => (
             ].concat(meta)}
         />
         <Layout>
-            <WorkTitle>
-                Work
-            </WorkTitle>
+            <TeamTitle>
+                Team
+            </TeamTitle>
             <>
                 {projects.map((project, i) => (
                     <ProjectCard
