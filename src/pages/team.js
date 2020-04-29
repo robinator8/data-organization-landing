@@ -4,13 +4,14 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import styled from "@emotion/styled";
 import Layout from "components/Layout";
-import ProjectCard from "components/ProjectCard";
+import PersonCard from "components/PersonCard";
+import * as constants from "utils/constants";
 
 const TeamTitle = styled("h1")`
     margin-bottom: 1em;
 `
 
-const Work = ({ projects, meta }) => (
+const Work = ({ people, meta }) => (
     <>
         <Helmet
             title={"Team"}
@@ -55,14 +56,19 @@ const Work = ({ projects, meta }) => (
                 Team
             </TeamTitle>
             <>
-                {projects.map((project, i) => (
-                    <ProjectCard
-                        key={i}
-                        category={project.node.project_category}
-                        title={project.node.project_title}
-                        description={project.node.project_preview_description}
-                        thumbnail={project.node.project_preview_thumbnail}
-                        uid={project.node._meta.uid}
+                {people.map((person, i) => (
+                    // <PersonCard
+                    //     key={i}
+                    //     category={project.node.project_category}
+                    //     title={project.node.project_title}
+                    //     description={project.node.project_preview_description}
+                    //     thumbnail={project.node.project_preview_thumbnail}
+                    //     uid={project.node._meta.uid}
+                    // />
+                    <PersonCard
+                        name={person.name}
+                        description={person.description}
+                        linkedin={person.linkedin}
                     />
                 ))}
             </>
@@ -71,37 +77,31 @@ const Work = ({ projects, meta }) => (
 );
 
 export default ({ data }) => {
-    const projects = data.prismic.allProjects.edges;
+    // const projects = data.prismic.allProjects.edges;
     const meta = data.site.siteMetadata;
-    if (!projects) return null;
+    // if (!projects) return null;
+
+    // const people = [{
+    //     name: "test person1",
+    //     description: "test person1 description",
+    //     linkedin: "https://linkedin.com"
+    // },{
+    //     name: "test person2",
+    //     description: "test person2 description",
+    //     linkedin: "https://linkedin.com"
+    // }]
 
     return (
-        <Work projects={projects} meta={meta}/>
+        <Work people={constants.teamList} meta={meta}/>
     )
 }
 
 Work.propTypes = {
-    projects: PropTypes.array.isRequired,
+    people: PropTypes.array.isRequired,
 };
 
 export const query = graphql`
     {
-        prismic {
-            allProjects {
-                edges {
-                    node {
-                        project_title
-                        project_preview_description
-                        project_preview_thumbnail
-                        project_category
-                        project_post_date
-                        _meta {
-                            uid
-                        }
-                    }
-                }
-            }
-        }
         site {
             siteMetadata {
                 title
