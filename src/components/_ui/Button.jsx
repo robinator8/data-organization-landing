@@ -15,6 +15,10 @@ const ButtonContainer = styled("button")`
     position: relative;
     transition: background 100ms ease-in-out;
 
+    & + button {
+        margin-left: 1em;
+    }
+    
     @media(max-width:${dimensions.maxwidthMobile}px) {
         padding: 0.8em 1.8em;
         font-size: 1em;
@@ -24,33 +28,10 @@ const ButtonContainer = styled("button")`
         margin: 0;
     }
 
-    &:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, ${colors.orange600} 0%, ${colors.orange600} 100%);
-        z-index: -1;
-    }
-
     &:hover {
+        background: ${colors.orange600};
         cursor: pointer;
-        background: transparent;
         transition: background 100ms ease-in-out;
-    }
-
-    &.Button--secondary {
-        // background: ${colors.white};
-        // color: ${colors.orange600};
-        padding: 0.95em 1.8em;
-        font-size: 0.95rem;
-
-        &:hover {
-            // background: ${colors.gray300};
-            transition: background 100ms ease-in-out;
-        }
     }
 `
 
