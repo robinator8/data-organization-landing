@@ -103,7 +103,7 @@ const Project = ({ project, meta }) => {
                 <ProjectBody>
                     {RichText.render(project.project_description)}
                     <WorkLink to={"/work"}>
-                        <Button className="Button--secondary">
+                        <Button>
                             See other work
                         </Button>
                     </WorkLink>
