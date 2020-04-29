@@ -14,5 +14,5 @@ exports.teamList = [{
 }, {
     name: "Robert Craig",
     description: "Robert is a self-motivated problem solver attending the University of Waterloo for Software Engineering. His background is in front-end and back-end web development.",
-    linkedin: "https://www.linkedin.com/in/rob-craig/detail/contact-info/",
+    linkedin: "https://www.linkedin.com/in/rob-craig/",
 }]
