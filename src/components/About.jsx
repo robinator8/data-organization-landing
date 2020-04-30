@@ -9,7 +9,7 @@ import * as constants from "utils/constants";
 const AboutContainer = styled("div")`
     padding-top: 1em;
     display: grid;
-    grid-template-columns: 1fr 8em;
+    grid-template-columns: 1fr 10em;
     grid-gap: 3em;
 
     @media(max-width: ${dimensions.maxwidthTablet}px) {
