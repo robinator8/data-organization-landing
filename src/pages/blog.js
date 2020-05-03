@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Helmet from "react-helmet";
+import SiteHelmet from "components/SiteHelmet";
 import { graphql } from "gatsby";
 import styled from "@emotion/styled";
 import dimensions from "styles/dimensions";
@@ -29,44 +29,7 @@ const BlogGrid = styled("div")`
 
 const Blog = ({ posts, meta }) => (
     <>
-        <Helmet
-            title={"Blog"}
-            titleTemplate={`%s | ${meta.title}`}
-            meta={[
-                {
-                    name: `description`,
-                    content: meta.description,
-                },
-                {
-                    property: `og:title`,
-                    content: meta.title,
-                },
-                {
-                    property: `og:description`,
-                    content: meta.description,
-                },
-                {
-                    property: `og:type`,
-                    content: `website`,
-                },
-                {
-                    name: `twitter:card`,
-                    content: `summary`,
-                },
-                {
-                    name: `twitter:creator`,
-                    content: meta.author,
-                },
-                {
-                    name: `twitter:title`,
-                    content: meta.title,
-                },
-                {
-                    name: `twitter:description`,
-                    content: meta.description,
-                },
-            ].concat(meta)}
-        />
+        <SiteHelmet title={"Home"} meta={meta} />
         <Layout>
             <BlogTitle>
                 Blog
