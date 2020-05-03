@@ -26,7 +26,7 @@ const FooterAuthor = styled("a")`
     margin-top: 1.5em;
 
      &:hover {
-         color: ${colors.orange600};
+         color: ${colors.red600};
 
         .FooterSpooch {
             animation-name: rotate;

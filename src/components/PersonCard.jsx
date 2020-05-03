@@ -30,7 +30,7 @@ const PersonCardContent = styled("div")`
         height: 100%;
         left: 0;
         top: 0;
-        background: ${colors.orange500};
+        background: ${colors.red500};
         mix-blend-mode: multiply;
         opacity: 0;
         transition: all 150ms ease-in-out;

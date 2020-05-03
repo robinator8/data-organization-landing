@@ -58,14 +58,14 @@ const HeaderLinks = styled("div")`
 
         &:hover {
             &:after {
-                background: ${colors.orange500};
+                background: ${colors.red500};
                 transition: 100ms ease-in-out background;
             }
         }
 
         &.Link--is-active {
             &:after {
-                background: ${colors.orange500};
+                background: ${colors.red500};
                 transition: 100ms ease-in-out background;
             }
         }

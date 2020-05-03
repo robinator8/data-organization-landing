@@ -32,7 +32,7 @@ const ProjectCardContainer = styled(Link)`
         transition: all 150ms ease-in-out;
 
         .ProjectCardAction {
-            color: ${colors.orange500};
+            color: ${colors.red500};
             transition: all 150ms ease-in-out;
 
             span {
@@ -66,7 +66,7 @@ const ProjectCardContent = styled("div")`
         height: 100%;
         left: 0;
         top: 0;
-        background: ${colors.orange500};
+        background: ${colors.red500};
         mix-blend-mode: multiply;
         opacity: 0;
         transition: all 150ms ease-in-out;
@@ -140,7 +140,7 @@ const ProjectCardImageContainer = styled("div")`
         height: 100%;
         left: 0;
         top: 0;
-        background: ${colors.orange500};
+        background: ${colors.red500};
         mix-blend-mode: multiply;
         opacity: 0;
         transition: all 150ms ease-in-out;

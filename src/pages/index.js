@@ -27,13 +27,13 @@ const Hero = styled("div")`
         a {
             text-decoration: none;
             transition: all 100ms ease-in-out;
-            color: ${colors.orange500};
+            color: ${colors.red500};
 
             &:hover {
                 cursor: pointer;
                 transition: all 100ms ease-in-out;
-                color: ${colors.orange600};  
-                background-color: ${colors.orange200};
+                color: ${colors.red600};  
+                background-color: ${colors.red200};
             }
         }
     }
@@ -72,7 +72,7 @@ const WorkAction = styled(Link)`
     }
 
     &:hover {
-        color: ${colors.orange500};
+        color: ${colors.red500};
         transition: all 150ms ease-in-out;
 
         span {
