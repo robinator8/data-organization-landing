@@ -42,22 +42,4 @@ const SiteHelmet = ({ title, meta }) => (
     />
 )
 
-export default ({ title, meta }) => {
-    // const meta = data.site.siteMetadata;
-
-    return (
-        <SiteHelmet meta={meta} title={title} />
-    )
-}
-
-export const query = graphql`
-    {
-        site {
-            siteMetadata {
-                title
-                description
-                author
-            }
-        }
-    }
-`
+export default SiteHelmet
