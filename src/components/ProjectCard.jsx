@@ -160,15 +160,30 @@ const ProjectCardImageContainer = styled("div")`
 const ProjectCard = ({ category, title, description, thumbnail, uid}) => (
     <ProjectCardContainer to={`/work/${uid}`}>
         <ProjectCardContent className="ProjectCardContent">
-            <ProjectCardCategory>
-                {category[0].text}
-            </ProjectCardCategory>
-            <ProjectCardTitle>
-                {title[0].text}
-            </ProjectCardTitle>
-            <ProjectCardBlurb>
-                {RichText.render(description)}
-            </ProjectCardBlurb>
+            {
+            category && category[0] && category[0].text &&
+                (
+                    <ProjectCardCategory>
+                        {category[0].text}
+                    </ProjectCardCategory>
+                )
+            }
+            {
+                title && title[0] && title[0].text && 
+                (
+                    <ProjectCardTitle>
+                        {title[0].text}
+                    </ProjectCardTitle>
+                )
+            }
+            {
+                description && 
+                (
+                    <ProjectCardBlurb>
+                        {RichText.render(description)}
+                    </ProjectCardBlurb>
+                )
+            }
             <ProjectCardAction className="ProjectCardAction">
                 Details <span>&#8594;</span>
             </ProjectCardAction>
