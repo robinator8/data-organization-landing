@@ -87,15 +87,30 @@ const PostCardAction = styled("div")`
 
 const PostCard = ({ author, category, date, title, description, uid}) => (
     <PostCardContainer className="BlogPostCard" to={`/blog/${uid}`}>
-        <PostCategory>
-            {category[0].text}
-        </PostCategory>
-        <PostTitle>
-            {title[0].text}
-        </PostTitle>
-        <PostDescription>
-            {RichText.render(description)}
-        </PostDescription>
+        {
+            category && category[0] && category[0].text && 
+            (
+                <PostCategory>
+                    {category[0].text}
+                </PostCategory>
+            )
+        }
+        {
+            title && title[0] && title[0].text && 
+            (
+                <PostTitle>
+                    {title[0].text}
+                </PostTitle>
+            )
+        }
+        {
+            description && 
+            (
+                <PostDescription>
+                    {RichText.render(description)}
+                </PostDescription>
+            )
+        }
         <PostCardAction className="PostCardAction">
             Read more <span>&#8594;</span>
         </PostCardAction>
